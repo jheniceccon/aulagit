@@ -1,44 +1,115 @@
+/* Estilo geral */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  text-align: center;
-  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
+/* Container principal */
 #app {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
   max-width: 400px;
-  margin: auto;
-  background: white;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  color: #4f6367;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Input e botão */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 #taskInput {
-  width: 80%;
+  flex: 1;
   padding: 10px;
+  border: 2px solid #d1c4e9;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #4f6367;
 }
 
 #addTaskButton {
+  background-color: #ffb7b2;
+  border: none;
   padding: 10px 15px;
-  margin-left: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+#addTaskButton:hover {
+  background-color: #f77f77;
+}
+
+/* Lista de tarefas */
 #taskList {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
 }
 
 .task {
-  padding: 10px;
-  border: 1px solid #ccc;
+  background-color: #e4e5e7;
+  border: 1px solid #c1c7d0;
+  border-radius: 5px;
+  padding: 10px 15px;
   margin: 5px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
 }
 
+.task:hover {
+  transform: scale(1.02);
+}
+
+/* Botões de ação */
+.task button {
+  background-color: #ffd1dc;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #4f6367;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s;
+}
+
+.task button:hover {
+  background-color: #f77f77;
+  color: white;
+}
+
+/* Tarefa concluída */
 .task.completed {
+  background-color: #d6e6f2;
   text-decoration: line-through;
-  color: gray;
+  color: #738290;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #738290;
 }
